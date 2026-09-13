@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Falco Mercados — Cobre</title>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/chart.min.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="bar"></div>
+    <h1><span class="gold">FALCO</span> Mercados</h1>
+  </div>
+  <div class="topright">
+    <span class="tagline">Data dura · fuentes citadas · dato oficial vs estimación</span>
+    <a class="acct" href="#"><span class="dot">T</span> Cuenta ▾</a>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="side-label">Mercados</div>
+    <nav>
+      <a href="index.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Inicio</a>
+      <div class="side-div"></div>
+      <a href="arandanos.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="5"/><circle cx="16.5" cy="11.5" r="3"/><path d="M12 8.5c0-2 1.5-3.5 4-3.5"/></svg>Arándanos</a>
+      <a href="avellanas.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 2.5 6 5.5 6 9a6 6 0 0 1-12 0c0-3.5 2-6.5 6-9z"/><path d="M9 13.5c0 1.7 1.3 3 3 3"/></svg>Avellanas</a>
+      <a href="granos.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V7"/><path d="M12 9C10 9 8.5 7.5 8.5 5 11 5 12 6.5 12 9z"/><path d="M12 9c2 0 3.5-1.5 3.5-4C13 5 12 6.5 12 9z"/><path d="M12 15c-2 0-3.5-1.5-3.5-4 2.5 0 3.5 1.5 3.5 4z"/><path d="M12 15c2 0 3.5-1.5 3.5-4C13 11 12 12.5 12 15z"/></svg>Granos</a>
+      <a href="cobre.html" class="active"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5"/><path d="M12 12v9"/></svg>Cobre</a>
+      <a href="tasas.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5v14h16"/><path d="M7 14l4-5 3 3 4-6"/></svg>Tasas &amp; FX</a>
+    </nav>
+    <div class="side-foot">No constituye asesoría. Se cita la fuente de cada dato.</div>
+  </aside>
+
+  <main class="main">
+    <div class="mkt-head">
+      <div>
+        <h2>Cobre — Oferta · Demanda · Balance · Precio</h2>
+        <div class="sub">Seguimiento mensual · COMEX/LME · ICSG · corte 10-sep-2026</div>
+      </div>
+      <a class="btn-dl" href="informes/informe_cobre_FALCO.pdf" download>Descargar informe (PDF)</a>
+    </div>
+    <div class="goldline"></div>
+
+    <div class="subtabs">
+      <button class="subtab" data-tab="resumen">Resumen</button>
+      <button class="subtab" data-tab="oferta">Oferta</button>
+      <button class="subtab" data-tab="demanda">Demanda</button>
+      <button class="subtab" data-tab="precios">Precios</button>
+      <button class="subtab" data-tab="noticias">Noticias</button>
+    </div>
+
+    <!-- RESUMEN -->
+    <div class="tabpane" data-tab="resumen">
+      <div class="stats">
+        <div class="stat"><div class="k">COMEX (spot)</div><div class="v">US$6,525/lb</div><div class="d down">▼ −1,1% día</div></div>
+        <div class="stat"><div class="k">LME (spot)</div><div class="v">US$14.385/t</div><div class="d">≈ US$6,53/lb</div></div>
+        <div class="stat"><div class="k">Inventarios COMEX</div><div class="v">635 kt</div><div class="d up">▲ récord (distorsión tarifaria)</div></div>
+        <div class="stat"><div class="k">Balance 2026</div><div class="v">en disputa</div><div class="d">−600 a +126 kt según la casa</div></div>
+      </div>
+      <div class="commentary">
+        <h3>Drivers de hoy</h3>
+        <ul>
+          <li><strong>Tarifas EEUU:</strong> el plan de aranceles al cobre refinado de la Casa Blanca se estancó → se cae el driver que inflaba el rally. <strong>−5,4% intradía el 10-sep</strong> tras cerrar en récord 6,8885 US$/lb el 9-sep.</li>
+          <li><strong>Macro Fed:</strong> PPI EEUU caliente + petróleo sobre US$105 empujan la probabilidad de <strong>alza</strong> de tasa Fed a ~70% → dólar fuerte, malo para metales.</li>
+          <li><strong>Oferta Andes:</strong> Chile/Perú con permisos trabados y costos; caídas en Codelco/Freeport dan piso estructural pero no frenaron la toma de ganancias.</li>
+          <li><strong>Demanda IA / data centers:</strong> real pero chica en el total (~1,7%); tesis de largo plazo, no gatillo de corto.</li>
+          <li><strong>China:</strong> consumo aparente +2,4% YoY (ene-abr), moderado; el freno inmobiliario le pone techo pese a red eléctrica y transición.</li>
+        </ul>
+        <div class="lede"><strong>Qué significa para Tom:</strong> el rally reciente fue humo tarifario, no demanda física — por eso corrigió −5% el mismo día que se cayó el plan de aranceles. Cobre a la baja + Fed girando hawkish = presión <strong>al alza sobre el dólar</strong> (mala para el CLP), empujando al peso hacia/pasando su fair value. Ojo con relatos alcistas "por la IA": es tesis de 5–10 años y el balance 2026 está genuinamente en disputa.</div>
+      </div>
+    </div>
+
+    <!-- OFERTA -->
+    <div class="tabpane" data-tab="oferta">
+      <div class="panel">
+        <h3>Producción de cobre — mina vs. refinado (kt/año)</h3>
+        <div class="cap">Serie ICSG 2011–2025. La refinada crece sostenido; la mina va más lenta (permisos, costos, leyes a la baja).</div>
+        <div class="chartbox"><canvas id="chartProd"></canvas></div>
+        <div class="src">Fuente: ICSG (World Refined Copper Production, 2022–2025) + World Copper Factbook 2020 (2011–2019) · mina USGS MCS. 2025 preliminar.</div>
+      </div>
+      <div class="commentary">
+        <h3>Oferta y fundamentos</h3>
+        <ul>
+          <li><strong>Mina 2025 ≈ 23.201 kt</strong> (+1,1% YoY): crece, pero lento. Utilización de capacidad de mina <strong>80,5%</strong> en 2025 (ICSG) — hay margen ocioso, pero la oferta nueva llega lento.</li>
+          <li><strong>Andes trabados:</strong> Chile y Perú (los mayores productores) con permisos y inflación de costos frenando mina nueva; caídas reportadas en Codelco y Freeport-McMoRan. América −2,2% mina en H1 2026 (ICSG).</li>
+          <li><strong>H1 2026 (ICSG preliminar):</strong> refinado producido 14.401 kt (+2,4%), mina 11.341 kt (−1,1%). Balance H1 <strong>+131 kt</strong> (superávit leve).</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DEMANDA -->
+    <div class="tabpane" data-tab="demanda">
+      <div class="panel">
+        <h3>Balance 2026 — estimaciones de la casa (kt)</h3>
+        <div class="cap">Divergencia enorme: de −600 kt (déficit) a +126 kt (superávit). Nadie tiene el balance cerrado. ICSG H1 real dio +131 kt.</div>
+        <div class="chartbox"><canvas id="chartBal"></canvas></div>
+        <div class="src">Fuente: JP Morgan, Morgan Stanley, Red Cloud (proyecciones 2026) · ICSG (H1 real). Negativo = déficit, positivo = superávit.</div>
+      </div>
+      <div class="panel">
+        <h3>Inventarios visibles por bolsa (kt)</h3>
+        <div class="cap">COMEX en récord: traders adelantaron ~500 kt a bodegas EEUU antes de los aranceles. Distorsión tarifaria, no demanda física.</div>
+        <div class="chartbox"><canvas id="chartInv"></canvas></div>
+        <div class="src">Fuente: LME/CME/SHFE vía prensa (MINING.COM, Northern Miner, MacroMicro), fines ago / inicios sep 2026. Combinado &gt;1 Mt: máximo desde 2003.</div>
+      </div>
+      <div class="commentary">
+        <h3>Demanda derivada</h3>
+        <ul>
+          <li><strong>China ≈ 58%</strong> del uso global; consumo aparente +2,4% YoY (ene-abr), proyectado +3,7% en 2026. El freno inmobiliario le pone techo.</li>
+          <li><strong>Data centers / IA:</strong> ~475 kt en 2026 (~1,7% de un mercado de ~28 Mt). Absorben casi todo el <em>crecimiento</em> del año (~1,6%) pero son chicos en el total. Driver estructural (Macquarie: 330–420 kt/año a 2030), no lo que mueve el precio semanal.</li>
+          <li><strong>EEUU en riesgo:</strong> pronósticos ven demanda cayendo ~6% en 2026 por efecto tarifas (Red Cloud).</li>
+          <li><strong>Posiciones:</strong> managed money neto <strong>largo ~72.882 contratos</strong> COMEX (~826 kt notional) al 2-sep. Long grande y apretado → vulnerable a liquidación; el −5,4% del 10-sep fue exactamente eso.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PRECIOS -->
+    <div class="tabpane" data-tab="precios">
+      <div class="panel">
+        <h3>Precio del cobre — promedio anual (US$/tonelada)</h3>
+        <div class="cap">COMEX front-month, promedio anual. 2025 cerró en récord (~US$10.531/t); 2026 promedia ~US$13.981/t con el pico tarifario.</div>
+        <div class="chartbox"><canvas id="chartPrecio"></canvas></div>
+        <div class="src">Fuente: COMEX HG=F front-month, promedio anual (Yahoo). Difiere levemente del promedio LME de ICSG (ej. 2024 COMEX ~9.260 vs LME 9.147).</div>
+      </div>
+      <div class="commentary">
+        <div class="lede"><span class="soon-note">Nota honesta: el spot COMEX cotiza en <strong>US$/lb</strong> (6,525) y el LME en <strong>US$/t</strong> (14.385); 1 t = 2.204,62 lb. El pico de 2026 refleja el arbitraje tarifario EEUU (prima COMEX sobre LME), no un salto de demanda física. Para el fair value CLP/USD lo que manda es el spot, que responde a tarifas + Fed + China.</span></div>
+      </div>
+    </div>
+
+    <!-- NOTICIAS -->
+    <div class="tabpane" data-tab="noticias">
+      <div class="newslist">
+        <a href="https://www.icsg.org/" target="_blank" rel="noopener">
+          <div class="nt">ICSG — International Copper Study Group</div>
+          <div class="nm"><span class="fuente">ICSG (oficial)</span> · balance producción/uso refinado, tablas mensuales</div></a>
+        <a href="https://www.cftc.gov/dea/futures/other_lf.htm" target="_blank" rel="noopener">
+          <div class="nt">CFTC — Commitments of Traders (COMEX HG)</div>
+          <div class="nm"><span class="fuente">CFTC (oficial)</span> · posición managed money, semanal</div></a>
+        <a href="https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-copper.pdf" target="_blank" rel="noopener">
+          <div class="nt">USGS — Mineral Commodity Summaries (Copper)</div>
+          <div class="nm"><span class="fuente">USGS (oficial)</span> · producción de mina por país</div></a>
+        <a href="https://www.lme.com/en/Metals/Non-ferrous/LME-Copper" target="_blank" rel="noopener">
+          <div class="nt">LME — Copper (precio e inventarios)</div>
+          <div class="nm"><span class="fuente">LME (oficial)</span> · spot, stocks warrantados</div></a>
+      </div>
+      <div class="commentary">
+        <div class="lede"><span class="soon-note">Honestidad: la pestaña de Noticias apunta a las <strong>fuentes primarias oficiales</strong> (ICSG, CFTC, USGS, LME). El feed de prensa curada de cobre se está montando mes a mes.</span></div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="row">
+        <span>© <span id="yr"></span> <span class="gold">FALCO</span> Mercados — no constituye asesoría.</span>
+        <span>Fuentes: ICSG · COMEX/LME · USGS · CFTC.</span>
+      </div>
+    </footer>
+  </main>
+</div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const GOLD='#C9A24A',NAVY='#0D1B2A',BLUE='#3E6B8F',RED='#C0564A',GREEN='#2E8B57',GREY='#5B6B7A',LGREY='#8FA0B0',LINE='#E2DCCB';
+Chart.defaults.font.family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif";
+Chart.defaults.color=GREY;
+const YRS=['2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'];
+const MINA=[15960,16687,18185,18422,19153,20393,20058,20565,20528,20600,21200,21904,22346,22955,23201];
+const REFP=[19601,20194,21058,22490,22838,23357,23548,24058,24045,24500,24870,25278,26508,27414,28656];
+const PREC=[7807,7979,7284,6773,5459,4942,6271,6355,6039,6183,9381,8640,8520,9260,10531];
+const charts={};
+function build(tab){
+  if(tab==='oferta'&&!charts.prod){
+    charts.prod=new Chart(document.getElementById('chartProd'),{
+      type:'line',data:{labels:YRS,datasets:[
+        {label:'Refinado producido (kt)',data:REFP,borderColor:GOLD,backgroundColor:'rgba(201,162,74,.10)',fill:true,tension:.25,pointRadius:0,borderWidth:2.4},
+        {label:'Mina (kt)',data:MINA,borderColor:BLUE,backgroundColor:'transparent',tension:.25,pointRadius:0,borderWidth:2.2}
+      ]},
+      options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+        plugins:{legend:{labels:{boxWidth:14,usePointStyle:true}},
+          tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+c.parsed.y.toLocaleString('es-CL')+' kt'}}},
+        scales:{y:{title:{display:true,text:'kt'},grid:{color:LINE}},x:{grid:{display:false}}}}});
+  }
+  if(tab==='demanda'&&!charts.bal){
+    charts.bal=new Chart(document.getElementById('chartBal'),{
+      type:'bar',data:{labels:['Morgan Stanley','JP Morgan','ICSG (H1 real)','Red Cloud'],
+        datasets:[{label:'Balance 2026 (kt)',data:[-600,-330,131,126],backgroundColor:[RED,RED,GREY,GREEN],borderRadius:4}]},
+      options:{maintainAspectRatio:false,plugins:{legend:{display:false},
+          tooltip:{callbacks:{label:c=>' '+(c.parsed.y>=0?'+':'')+c.parsed.y+' kt ('+(c.parsed.y>=0?'superávit':'déficit')+')'}}},
+        scales:{y:{title:{display:true,text:'kt (déficit ◂ 0 ▸ superávit)'},grid:{color:LINE}},x:{grid:{display:false}}}}});
+    charts.inv=new Chart(document.getElementById('chartInv'),{
+      type:'bar',data:{labels:['COMEX','LME','SHFE'],
+        datasets:[{label:'Inventario (kt)',data:[635,107,70],backgroundColor:[GOLD,BLUE,BLUE],borderRadius:4}]},
+      options:{maintainAspectRatio:false,plugins:{legend:{display:false},
+          tooltip:{callbacks:{label:c=>' '+c.parsed.y+' kt'}}},
+        scales:{y:{title:{display:true,text:'kt'},grid:{color:LINE}},x:{grid:{display:false}}}}});
+  }
+  if(tab==='precios'&&!charts.precio){
+    charts.precio=new Chart(document.getElementById('chartPrecio'),{
+      type:'line',data:{labels:YRS,datasets:[
+        {label:'Precio prom. anual (US$/t)',data:PREC,borderColor:GOLD,backgroundColor:'rgba(201,162,74,.12)',fill:true,tension:.25,pointRadius:2,borderWidth:2.4}
+      ]},
+      options:{maintainAspectRatio:false,plugins:{legend:{display:false},
+          tooltip:{callbacks:{label:c=>' US$'+c.parsed.y.toLocaleString('es-CL')+'/t'}}},
+        scales:{y:{title:{display:true,text:'US$/tonelada'},grid:{color:LINE}},x:{grid:{display:false}}}}});
+  }
+  Object.values(charts).forEach(c=>c.resize());
+}
+function show(tab){
+  document.querySelectorAll('.subtab').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
+  document.querySelectorAll('.tabpane').forEach(p=>p.classList.toggle('active',p.dataset.tab===tab));
+  build(tab);
+}
+document.querySelectorAll('.subtab').forEach(b=>b.addEventListener('click',()=>show(b.dataset.tab)));
+show('resumen');
+</script>
+</body>
+</html>
