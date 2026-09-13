@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Falco Mercados — Granos</title>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/chart.min.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="bar"></div>
+    <h1><span class="gold">FALCO</span> Mercados</h1>
+  </div>
+  <div class="topright">
+    <span class="tagline">Data dura · fuentes citadas · dato oficial vs estimación</span>
+    <a class="acct" href="#"><span class="dot">T</span> Cuenta ▾</a>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="side-label">Mercados</div>
+    <nav>
+      <a href="index.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Inicio</a>
+      <div class="side-div"></div>
+      <a href="arandanos.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="5"/><circle cx="16.5" cy="11.5" r="3"/><path d="M12 8.5c0-2 1.5-3.5 4-3.5"/></svg>Arándanos</a>
+      <a href="avellanas.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 2.5 6 5.5 6 9a6 6 0 0 1-12 0c0-3.5 2-6.5 6-9z"/><path d="M9 13.5c0 1.7 1.3 3 3 3"/></svg>Avellanas</a>
+      <a href="granos.html" class="active"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V7"/><path d="M12 9C10 9 8.5 7.5 8.5 5 11 5 12 6.5 12 9z"/><path d="M12 9c2 0 3.5-1.5 3.5-4C13 5 12 6.5 12 9z"/><path d="M12 15c-2 0-3.5-1.5-3.5-4 2.5 0 3.5 1.5 3.5 4z"/><path d="M12 15c2 0 3.5-1.5 3.5-4C13 11 12 12.5 12 15z"/></svg>Granos</a>
+      <a href="tasas.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5v14h16"/><path d="M7 14l4-5 3 3 4-6"/></svg>Tasas &amp; FX</a>
+    </nav>
+    <div class="side-foot">No constituye asesoría. Se cita la fuente de cada dato.</div>
+  </aside>
+
+  <main class="main">
+    <div class="mkt-head">
+      <div>
+        <h2>Granos — Maíz · Trigo · Canola/Raps</h2>
+        <div class="sub">Seguimiento semanal · precios CBOT en USD/t · corte 07-sep-2026</div>
+      </div>
+      <a class="btn-dl" href="informes/informe_granos_FALCO.pdf" download>Descargar informe (PDF)</a>
+    </div>
+    <div class="goldline"></div>
+
+    <div class="subtabs">
+      <button class="subtab" data-tab="resumen">Resumen</button>
+      <button class="subtab" data-tab="oferta">Oferta</button>
+      <button class="subtab" data-tab="demanda">Demanda</button>
+      <button class="subtab" data-tab="precios">Precios</button>
+      <button class="subtab" data-tab="noticias">Noticias</button>
+    </div>
+
+    <!-- RESUMEN -->
+    <div class="tabpane" data-tab="resumen">
+      <div class="stats">
+        <div class="stat"><div class="k">Maíz (CBOT)</div><div class="v">US$211/t</div><div class="d">536,75 ¢/bu</div></div>
+        <div class="stat"><div class="k">Trigo SRW (CBOT)</div><div class="v">US$270/t</div><div class="d down">▼ −3,9% semana</div></div>
+        <div class="stat"><div class="k">Canola (ICE)</div><div class="v">US$596/t</div><div class="d up">▲ +31,4% YoY</div></div>
+        <div class="stat"><div class="k">Soja (CBOT)</div><div class="v">US$481/t</div><div class="d up">▲ 1.309,75 ¢/bu</div></div>
+      </div>
+      <div class="commentary">
+        <h3>Síntesis de la semana</h3>
+        <ul>
+          <li><strong>Trigo global escaso:</strong> EEUU proyecta la cosecha más chica en 50+ años (42,5 Mt, −21%) y stocks en mínimo de 54 años; Argentina 26/27E −22,6%. Pese a eso, el SRW cayó −3,9% en la semana.</li>
+          <li><strong>Canola/raps firme:</strong> canola +31,4% YoY con Canadá en área récord (21 Mt); raps MATIF US$625/t, el grano más caro del panel.</li>
+          <li><strong>Maíz cómodo:</strong> EEUU con superficie récord (96,7 M acres) y producción 406,7 Mt; precio productor ~US$4,5/bu. Chile importa &gt;80% de Argentina.</li>
+        </ul>
+        <div class="lede"><strong>Síntesis:</strong> el trigo es la historia de oferta ajustada (EEUU y Argentina a la baja), mientras maíz y aceites oscilan por biocombustibles y clima. Todos los precios en USD/tonelada, no bushels.</div>
+      </div>
+    </div>
+
+    <!-- OFERTA -->
+    <div class="tabpane" data-tab="oferta">
+      <div class="panel">
+        <h3>Producción de trigo 2026/27E por región (Mt)</h3>
+        <div class="cap">Proyección de campaña. EEUU en mínimo histórico; Argentina, principal proveedor de Chile, también recorta.</div>
+        <div class="chartbox"><canvas id="chartTrigo"></canvas></div>
+        <div class="src">Fuente: USDA FAS / IGC (UE, Rusia) · AAFC (Canadá) · USDA FAS Grain &amp; Feed (Argentina). 26/27 = proyección de ciclo temprano, sensible al clima.</div>
+      </div>
+      <div class="panel">
+        <h3>Producción de maíz 2026/27E — principales exportadores (Mt)</h3>
+        <div class="cap">EEUU con superficie récord; Brasil y Argentina completan el trío americano.</div>
+        <div class="chartbox"><canvas id="chartMaiz"></canvas></div>
+        <div class="src">Fuente: USDA FAS abr/jul-2026. EEUU 16,013 bn bu (yield 180,7 bu/ac).</div>
+      </div>
+      <div class="commentary">
+        <h3>Oferta y fundamentos</h3>
+        <ul>
+          <li>Trigo EEUU 42,5 Mt: <strong>mínimo desde 1972/73</strong>, stocks en mínimo de 54 años. UE −5,7%, Rusia 88,5 Mt (exporta 47,5).</li>
+          <li>Argentina 26/27E: trigo 21,6 Mt (−22,6% vs 27,9 Mt récord real 25/26). <strong>Ojo: es proyección USDA</strong> — se cosecha nov-2026 a ene-2027, hoy solo hay cultivo en pie.</li>
+          <li>Canola: Canadá área récord (21 Mt, +9%); avena Canadá −25% (2,94 Mt). Maíz EEUU superficie récord 96,7 M acres.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DEMANDA -->
+    <div class="tabpane" data-tab="demanda">
+      <div class="panel">
+        <h3>Chile — origen de las importaciones de trigo (%)</h3>
+        <div class="cap">Chile importa ~984 kt/año de trigo (+25,5% en 2025). Argentina lidera, pero Canadá y EEUU pesan.</div>
+        <div class="chartbox"><canvas id="chartChile"></canvas></div>
+        <div class="src">Fuente: ODEPA (ene-nov 2025). Chile es importador neto estructural de trigo y maíz.</div>
+      </div>
+      <div class="commentary">
+        <h3>Demanda derivada y biocombustibles</h3>
+        <ul>
+          <li><strong>Biocombustibles = driver de maíz/soja:</strong> EEUU muele ~5,55 bn bu de maíz a etanol (~140 Mt); Brasil 9,19 bn L de etanol de maíz (+12,3%, 27% del total), proyectado a 12,0 bn L en 26/27.</li>
+          <li>Argentina: biodiésel 1,75 Mt, mandato B7,5 extendido a 2030; export a UE −26%. Soja a biodiésel ~10 Mt equivalente.</li>
+          <li><strong>Chile importador neto:</strong> maíz &gt;80% de Argentina (~2,5 Mt/año, consumo avícola/porcino); trigo diversificado (Argentina 49% · Canadá 27% · EEUU 24%).</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PRECIOS -->
+    <div class="tabpane" data-tab="precios">
+      <div class="panel">
+        <h3>Precios CBOT/ICE — panel de granos (US$/tonelada)</h3>
+        <div class="cap">Cierre 07-sep-2026. Convertidos de ¢/bu a USD/t con peso estándar; canola/raps de CAD/EUR con FX.</div>
+        <div class="chartbox"><canvas id="chartPrecio"></canvas></div>
+        <div class="src">Fuente: CBOT (maíz, trigo, soja) · ICE (canola) · MATIF (raps). FX USD/CAD 1,38 · EUR/USD 1,16.</div>
+      </div>
+      <div class="panel">
+        <h3>Costo de trigo internado en Santiago por origen (US$/t)</h3>
+        <div class="cap">FOB + flete + seguro + costos internos + aranceles. Argentina, el más barato puesto en Chile.</div>
+        <div class="chartbox"><canvas id="chartInternado"></canvas></div>
+        <div class="src">Fuente: ODEPA/Cotrisa, semana 17–23 ago 2026. Arancel y banda de precios = 0 esta semana. Flete ~US$42/t similar para todos; la ventaja argentina está en el FOB.</div>
+      </div>
+      <div class="commentary">
+        <div class="lede"><span class="soon-note">Nota: los precios CBOT se expresan en <strong>US$/tonelada</strong> (no bushels), convertidos con peso estándar + FX. El costo internado incluye la estructura oficial ODEPA/Cotrisa; el maíz no tiene banda de precios, el trigo sí (hoy inactiva por precios internacionales en máximos).</span></div>
+      </div>
+    </div>
+
+    <!-- NOTICIAS -->
+    <div class="tabpane" data-tab="noticias">
+      <div class="newslist">
+        <a href="https://www.usda.gov/oce/commodity/wasde" target="_blank" rel="noopener">
+          <div class="nt">USDA — WASDE (World Agricultural Supply and Demand Estimates)</div>
+          <div class="nm"><span class="fuente">USDA (oficial)</span> · último 12-ago-2026 · trigo EEUU mínimo 50+ años</div></a>
+        <a href="https://www.odepa.gob.cl/precios/cereales" target="_blank" rel="noopener">
+          <div class="nt">ODEPA — Costo de internación de trigo y maíz puesto en Chile</div>
+          <div class="nm"><span class="fuente">ODEPA/Cotrisa (oficial)</span> · indicador semanal por origen</div></a>
+        <a href="https://www.eia.gov/biofuels/" target="_blank" rel="noopener">
+          <div class="nt">EIA — Biocombustibles y demanda derivada de maíz/soja</div>
+          <div class="nm"><span class="fuente">EIA (oficial)</span> · etanol y biodiésel EEUU, RVO 2026-27</div></a>
+      </div>
+      <div class="commentary">
+        <div class="lede"><span class="soon-note">Honestidad: la pestaña de Noticias apunta a las <strong>fuentes primarias oficiales</strong> (USDA/WASDE, ODEPA, EIA). El feed de prensa curada de granos se está montando semana a semana.</span></div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="row">
+        <span>© <span id="yr"></span> <span class="gold">FALCO</span> Mercados — no constituye asesoría.</span>
+        <span>Fuentes: CBOT · ICE · MATIF · USDA/WASDE · ODEPA/Cotrisa · EIA.</span>
+      </div>
+    </footer>
+  </main>
+</div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const GOLD='#C9A24A',NAVY='#0D1B2A',BLUE='#3E6B8F',RED='#C0564A',GREEN='#2E8B57',GREY='#5B6B7A',LGREY='#8FA0B0',LINE='#E2DCCB';
+Chart.defaults.font.family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif";
+Chart.defaults.color=GREY;
+const charts={};
+function build(tab){
+  if(tab==='oferta'&&!charts.trigo){
+    charts.trigo=new Chart(document.getElementById('chartTrigo'),{
+      type:'bar',data:{labels:['EEUU','UE','Rusia','Canadá','Argentina'],
+        datasets:[{label:'Trigo 26/27E (Mt)',data:[42.5,136.8,88.5,35.26,21.6],backgroundColor:[RED,BLUE,BLUE,BLUE,GOLD],borderRadius:4}]},
+      options:{maintainAspectRatio:false,plugins:{legend:{display:false},
+          tooltip:{callbacks:{label:c=>' '+c.parsed.y+' Mt'}}},
+        scales:{y:{title:{display:true,text:'Mt'},grid:{color:LINE}},x:{grid:{display:false}}}}});
+    charts.maiz=new Chart(document.getElementById('chartMaiz'),{
+      type:'bar',data:{labels:['EEUU','Brasil','Argentina'],
+        datasets:[{label:'Maíz 26/27E (Mt)',data:[406.7,136.0,60.5],backgroundColor:GOLD,borderRadius:4}]},
+      options:{maintainAspectRatio:false,plugins:{legend:{display:false},
+          tooltip:{callbacks:{label:c=>' '+c.parsed.y+' Mt'}}},
+        scales:{y:{title:{display:true,text:'Mt'},grid:{color:LINE}},x:{grid:{display:false}}}}});
+  }
+  if(tab==='demanda'&&!charts.chile){
+    charts.chile=new Chart(document.getElementById('chartChile'),{
+      type:'doughnut',data:{labels:['Argentina','Canadá','EEUU'],
+        datasets:[{data:[49,27,24],backgroundColor:[GOLD,RED,BLUE],borderWidth:2,borderColor:'#fff'}]},
+      options:{maintainAspectRatio:false,cutout:'58%',
+        plugins:{legend:{position:'right',labels:{boxWidth:14,usePointStyle:true,padding:14}},
+          tooltip:{callbacks:{label:c=>' '+c.label+': '+c.parsed+'%'}}}}});
+  }
+  if(tab==='precios'&&!charts.precio){
+    charts.precio=new Chart(document.getElementById('chartPrecio'),{
+      type:'bar',data:{labels:['Maíz','Trigo SRW','Trigo HRW','Soja','Canola','Raps'],
+        datasets:[{label:'US$/t',data:[211.3,269.7,294.8,481.3,596.2,624.9],backgroundColor:[GOLD,BLUE,BLUE,GREEN,RED,RED],borderRadius:4}]},
+      options:{maintainAspectRatio:false,plugins:{legend:{display:false},
+          tooltip:{callbacks:{label:c=>' US$'+c.parsed.y.toFixed(1)+'/t'}}},
+        scales:{y:{title:{display:true,text:'US$/tonelada'},grid:{color:LINE}},x:{grid:{display:false}}}}});
+    charts.internado=new Chart(document.getElementById('chartInternado'),{
+      type:'bar',data:{labels:['Argentina (pan)','Trigo SRW (US)','Trigo HRW (US)'],
+        datasets:[
+          {label:'CIF',data:[288.9,324.1,378.8],backgroundColor:LGREY,borderRadius:4,stack:'s'},
+          {label:'Costos internos + aranceles',data:[18.2,18.8,20.0],backgroundColor:GOLD,borderRadius:4,stack:'s'}
+        ]},
+      options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+        plugins:{legend:{labels:{boxWidth:14,usePointStyle:true}},
+          tooltip:{callbacks:{label:c=>' '+c.dataset.label+': US$'+c.parsed.y.toFixed(1)+'/t',
+            footer:it=>'Internado: US$'+it.reduce((s,i)=>s+i.parsed.y,0).toFixed(1)+'/t'}}},
+        scales:{y:{stacked:true,title:{display:true,text:'US$/t puesto en Santiago'},grid:{color:LINE}},x:{stacked:true,grid:{display:false}}}}});
+  }
+  Object.values(charts).forEach(c=>c.resize());
+}
+function show(tab){
+  document.querySelectorAll('.subtab').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
+  document.querySelectorAll('.tabpane').forEach(p=>p.classList.toggle('active',p.dataset.tab===tab));
+  build(tab);
+}
+document.querySelectorAll('.subtab').forEach(b=>b.addEventListener('click',()=>show(b.dataset.tab)));
+show('resumen');
+</script>
+</body>
+</html>

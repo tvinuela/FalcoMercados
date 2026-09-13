@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Falco Mercados — Tasas &amp; FX</title>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/chart.min.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="bar"></div>
+    <h1><span class="gold">FALCO</span> Mercados</h1>
+  </div>
+  <div class="topright">
+    <span class="tagline">Data dura · fuentes citadas · dato oficial vs estimación</span>
+    <a class="acct" href="#"><span class="dot">T</span> Cuenta ▾</a>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="side-label">Mercados</div>
+    <nav>
+      <a href="index.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Inicio</a>
+      <div class="side-div"></div>
+      <a href="arandanos.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="5"/><circle cx="16.5" cy="11.5" r="3"/><path d="M12 8.5c0-2 1.5-3.5 4-3.5"/></svg>Arándanos</a>
+      <a href="avellanas.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 2.5 6 5.5 6 9a6 6 0 0 1-12 0c0-3.5 2-6.5 6-9z"/><path d="M9 13.5c0 1.7 1.3 3 3 3"/></svg>Avellanas</a>
+      <a href="granos.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V7"/><path d="M12 9C10 9 8.5 7.5 8.5 5 11 5 12 6.5 12 9z"/><path d="M12 9c2 0 3.5-1.5 3.5-4C13 5 12 6.5 12 9z"/><path d="M12 15c-2 0-3.5-1.5-3.5-4 2.5 0 3.5 1.5 3.5 4z"/><path d="M12 15c2 0 3.5-1.5 3.5-4C13 11 12 12.5 12 15z"/></svg>Granos</a>
+      <a href="tasas.html" class="active"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5v14h16"/><path d="M7 14l4-5 3 3 4-6"/></svg>Tasas &amp; FX</a>
+    </nav>
+    <div class="side-foot">No constituye asesoría. Se cita la fuente de cada dato.</div>
+  </aside>
+
+  <main class="main">
+    <div class="mkt-head">
+      <div>
+        <h2>Tasas &amp; FX — Chile y global</h2>
+        <div class="sub">Días hábiles · BCCH, Fed, curva soberana · corte 11-sep-2026</div>
+      </div>
+      <a class="btn-dl" href="informes/informe_tasas_FALCO_publico.pdf" download>Descargar informe (PDF)</a>
+    </div>
+    <div class="goldline"></div>
+
+    <div class="subtabs">
+      <button class="subtab" data-tab="resumen">Resumen</button>
+      <button class="subtab" data-tab="tasas">Tasas</button>
+      <button class="subtab" data-tab="fx">FX</button>
+      <button class="subtab" data-tab="global">Global</button>
+      <button class="subtab" data-tab="noticias">Noticias</button>
+    </div>
+
+    <!-- RESUMEN -->
+    <div class="tabpane" data-tab="resumen">
+      <div class="stats">
+        <div class="stat"><div class="k">TPM (BCCH)</div><div class="v">4,50%</div><div class="d">estable</div></div>
+        <div class="stat"><div class="k">USD/CLP</div><div class="v">$937,2</div><div class="d down">▲ peso más débil vs ene</div></div>
+        <div class="stat"><div class="k">BCP 10 años</div><div class="v">5,71%</div><div class="d">nominal soberano</div></div>
+        <div class="stat"><div class="k">Fed funds</div><div class="v">3,50–3,75%</div><div class="d">rango objetivo</div></div>
+      </div>
+      <div class="commentary">
+        <h3>Síntesis del corte</h3>
+        <ul>
+          <li><strong>TPM en 4,50%</strong> y el mercado la ve plana: EOF y EEE apuntan a 4,50% en el corto plazo y bajas hacia <strong>4,25%</strong> recién a 17+ meses.</li>
+          <li><strong>Dólar en $937</strong>: el peso se debilitó desde los ~$858 de enero, en línea con un DXY firme (99,1) pese al cobre alto.</li>
+          <li><strong>Curva</strong>: BCP 10a 5,71% / BCU 10a 2,52% → inflación implícita (breakeven) de <strong>3,19%</strong>, cerca de la meta del BCCH.</li>
+        </ul>
+        <div class="lede"><strong>Nota:</strong> esta es la vista pública de Tasas &amp; FX (datos oficiales BCCH/Fed). El modelo de fair value CLP/USD y el gatillo de venta forward son inteligencia interna y <strong>no se publican aquí</strong>.</div>
+      </div>
+    </div>
+
+    <!-- TASAS -->
+    <div class="tabpane" data-tab="tasas">
+      <div class="panel">
+        <h3>Curva soberana Chile — nominal (BCP) vs real (BCU)</h3>
+        <div class="cap">Tasa por plazo. La diferencia BCP−BCU = inflación implícita (breakeven).</div>
+        <div class="chartbox"><canvas id="chartCurva"></canvas></div>
+        <div class="src">Fuente: BCCH (BCP/BCU), corte 03–10 sep 2026. Breakeven 2a 3,40% · 5a 3,40% · 10a 3,19%.</div>
+      </div>
+      <div class="panel">
+        <h3>Expectativas de TPM (EEE, mediana)</h3>
+        <div class="cap">Trayectoria esperada de la Tasa de Política Monetaria por horizonte.</div>
+        <div class="chartbox"><canvas id="chartTpm"></canvas></div>
+        <div class="src">Fuente: BCCH — Encuesta de Expectativas Económicas (EEE), corte 01-sep-2026.</div>
+      </div>
+      <div class="commentary">
+        <h3>Lectura de tasas</h3>
+        <ul>
+          <li>TPM vigente <strong>4,50%</strong>; el consenso EEE la mantiene todo 2026 y recorta a <strong>4,25% desde ~17 meses</strong>. La EOF diaria no ve movimientos en el corto plazo.</li>
+          <li>Curva nominal con pendiente positiva (5,02% a 2a → 5,71% a 10a); la real (BCU) va de 1,62% a 2,52%.</li>
+          <li>Inflación implícita anclada cerca de 3% en el tramo largo — coherente con la meta del BCCH.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FX -->
+    <div class="tabpane" data-tab="fx">
+      <div class="panel">
+        <h3>Dólar observado (USD/CLP) — últimos 15 meses</h3>
+        <div class="cap">Cierre mensual del tipo de cambio observado; último dato al 11-sep-2026.</div>
+        <div class="chartbox"><canvas id="chartFx"></canvas></div>
+        <div class="src">Fuente: BCCH (dólar observado). Cierre de mes; sep-2026 = dato al 11.</div>
+      </div>
+      <div class="commentary">
+        <h3>Lectura de FX</h3>
+        <ul>
+          <li>El peso tocó piso ~<strong>$858 en enero-2026</strong> y desde ahí se depreció hasta <strong>$937</strong>, con vaivenes (máx. ~$932 en marzo).</li>
+          <li>Drivers de contexto: <strong>cobre US$6,56/lb</strong> (COMEX) sostiene por el lado de términos de intercambio, pero un <strong>DXY en 99,1</strong> pesa en contra.</li>
+          <li>El análisis de valor justo (cobre + DXY) y el timing de cobertura forward se manejan de forma privada, fuera de esta vista pública.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- GLOBAL -->
+    <div class="tabpane" data-tab="global">
+      <div class="panel">
+        <h3>Fed — dot plot (mediana proyectada del FOMC, %)</h3>
+        <div class="cap">Trayectoria mediana de la tasa de fondos federales según el SEP del FOMC (jun-2026).</div>
+        <div class="chartbox"><canvas id="chartDots"></canvas></div>
+        <div class="src">Fuente: FRED (St. Louis Fed) republicando el SEP/dot plot del FOMC, 17-jun-2026. Rango objetivo vigente 3,50–3,75%.</div>
+      </div>
+      <div class="commentary">
+        <h3>Lectura global</h3>
+        <ul>
+          <li>La Fed proyecta bajar gradualmente: mediana <strong>3,8% (2026) → 3,6% (2027) → 3,4% (2028)</strong>, con tasa neutral de largo plazo en 3,1%.</li>
+          <li><strong>DXY 99,1</strong>: dólar global firme, factor de presión para monedas emergentes como el peso.</li>
+          <li><strong>Cobre US$6,56/lb</strong>: sostiene los términos de intercambio de Chile; contrapeso al DXY.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- NOTICIAS -->
+    <div class="tabpane" data-tab="noticias">
+      <div class="newslist">
+        <a href="https://www.bcentral.cl/web/banco-central/areas/politica-monetaria" target="_blank" rel="noopener">
+          <div class="nt">Banco Central de Chile — Política Monetaria y TPM</div>
+          <div class="nm"><span class="fuente">BCCH (oficial)</span> · TPM vigente 4,50% · IPoM y reuniones</div></a>
+        <a href="https://www.bcentral.cl/web/banco-central/areas/estadisticas" target="_blank" rel="noopener">
+          <div class="nt">BCCH — Base de Datos Estadísticos (EOF, EEE, dólar, curva)</div>
+          <div class="nm"><span class="fuente">BCCH (oficial)</span> · expectativas, tipo de cambio, tasas BCP/BCU</div></a>
+        <a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener">
+          <div class="nt">Federal Reserve — FOMC y Summary of Economic Projections</div>
+          <div class="nm"><span class="fuente">Fed (oficial)</span> · dot plot · rango objetivo 3,50–3,75%</div></a>
+      </div>
+      <div class="commentary">
+        <div class="lede"><span class="soon-note">Honestidad: la pestaña de Noticias apunta a las <strong>fuentes primarias oficiales</strong> (BCCH, Fed). El feed de prensa macro curada se está montando. Recordatorio: el modelo de fair value y la señal de cobertura forward no forman parte de esta vista pública.</span></div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="row">
+        <span>© <span id="yr"></span> <span class="gold">FALCO</span> Mercados — no constituye asesoría.</span>
+        <span>Fuentes: BCCH (BDE) · Federal Reserve / FRED · COMEX (cobre) · ICE (DXY).</span>
+      </div>
+    </footer>
+  </main>
+</div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const GOLD='#C9A24A',NAVY='#0D1B2A',BLUE='#3E6B8F',RED='#C0564A',GREEN='#2E8B57',GREY='#5B6B7A',LGREY='#8FA0B0',LINE='#E2DCCB';
+Chart.defaults.font.family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif";
+Chart.defaults.color=GREY;
+const charts={};
+function build(tab){
+  if(tab==='tasas'&&!charts.curva){
+    charts.curva=new Chart(document.getElementById('chartCurva'),{
+      data:{labels:['2 años','5 años','10 años'],
+        datasets:[
+          {type:'line',label:'BCP (nominal)',data:[5.02,5.58,5.71],borderColor:BLUE,backgroundColor:BLUE,borderWidth:2,tension:.2,pointRadius:4},
+          {type:'line',label:'BCU (real)',data:[1.62,2.18,2.52],borderColor:GREEN,backgroundColor:GREEN,borderWidth:2,tension:.2,pointRadius:4},
+          {type:'line',label:'Breakeven',data:[3.40,3.40,3.19],borderColor:GOLD,backgroundColor:GOLD,borderWidth:2,borderDash:[5,4],tension:.2,pointRadius:4}
+        ]},
+      options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+        plugins:{legend:{labels:{boxWidth:14,usePointStyle:true}},
+          tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+c.parsed.y.toFixed(2)+'%'}}},
+        scales:{y:{title:{display:true,text:'% anual'},grid:{color:LINE}},x:{grid:{display:false}}}}});
+    charts.tpm=new Chart(document.getElementById('chartTpm'),{
+      type:'line',data:{labels:['En el mes','5m','11m','17m','23m','35m','LP'],
+        datasets:[{label:'TPM esperada (EEE)',data:[4.5,4.5,4.5,4.25,4.25,4.25,4.25],borderColor:GOLD,backgroundColor:GOLD+'22',fill:true,borderWidth:2,stepped:true,pointRadius:4}]},
+      options:{maintainAspectRatio:false,plugins:{legend:{display:false},
+          tooltip:{callbacks:{label:c=>' TPM '+c.parsed.y.toFixed(2)+'%'}}},
+        scales:{y:{title:{display:true,text:'% TPM'},min:4,max:4.75,grid:{color:LINE}},x:{grid:{display:false}}}}});
+  }
+  if(tab==='fx'&&!charts.fx){
+    charts.fx=new Chart(document.getElementById('chartFx'),{
+      type:'line',data:{labels:['jul-25','ago','sep','oct','nov','dic','ene-26','feb','mar','abr','may','jun','jul','ago','sep'],
+        datasets:[{label:'USD/CLP',data:[978.07,967.48,961.24,940.57,929.14,911.18,858.45,861.19,931.57,901.76,892.89,922.34,924.78,929.18,937.17],borderColor:BLUE,backgroundColor:BLUE+'22',fill:true,borderWidth:2,tension:.25,pointRadius:3}]},
+      options:{maintainAspectRatio:false,plugins:{legend:{display:false},
+          tooltip:{callbacks:{label:c=>' $'+c.parsed.y.toFixed(1)}}},
+        scales:{y:{title:{display:true,text:'CLP por USD'},grid:{color:LINE}},x:{grid:{display:false}}}}});
+  }
+  if(tab==='global'&&!charts.dots){
+    charts.dots=new Chart(document.getElementById('chartDots'),{
+      type:'line',data:{labels:['2026','2027','2028','Largo plazo'],
+        datasets:[{label:'Mediana Fed funds',data:[3.8,3.6,3.4,3.1],borderColor:RED,backgroundColor:RED+'22',fill:true,borderWidth:2,tension:.2,pointRadius:5}]},
+      options:{maintainAspectRatio:false,plugins:{legend:{display:false},
+          tooltip:{callbacks:{label:c=>' '+c.parsed.y.toFixed(2)+'%'}}},
+        scales:{y:{title:{display:true,text:'% mediana FOMC'},min:2.5,max:4.25,grid:{color:LINE}},x:{grid:{display:false}}}}});
+  }
+  Object.values(charts).forEach(c=>c.resize());
+}
+function show(tab){
+  document.querySelectorAll('.subtab').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));
+  document.querySelectorAll('.tabpane').forEach(p=>p.classList.toggle('active',p.dataset.tab===tab));
+  build(tab);
+}
+document.querySelectorAll('.subtab').forEach(b=>b.addEventListener('click',()=>show(b.dataset.tab)));
+show('resumen');
+</script>
+</body>
+</html>

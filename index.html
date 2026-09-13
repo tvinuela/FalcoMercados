@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Falco Mercados — Informes</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="bar"></div>
+    <h1><span class="gold">FALCO</span> Mercados</h1>
+  </div>
+  <div class="topright">
+    <span class="tagline">Data dura · fuentes citadas · dato oficial vs estimación</span>
+    <a class="acct" href="#"><span class="dot">T</span> Cuenta ▾</a>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="side-label">Mercados</div>
+    <nav>
+      <a href="index.html" class="active"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Inicio</a>
+      <div class="side-div"></div>
+      <a href="arandanos.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="5"/><circle cx="16.5" cy="11.5" r="3"/><path d="M12 8.5c0-2 1.5-3.5 4-3.5"/></svg>Arándanos</a>
+      <a href="avellanas.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c4 2.5 6 5.5 6 9a6 6 0 0 1-12 0c0-3.5 2-6.5 6-9z"/><path d="M9 13.5c0 1.7 1.3 3 3 3"/></svg>Avellanas</a>
+      <a href="granos.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V7"/><path d="M12 9C10 9 8.5 7.5 8.5 5 11 5 12 6.5 12 9z"/><path d="M12 9c2 0 3.5-1.5 3.5-4C13 5 12 6.5 12 9z"/><path d="M12 15c-2 0-3.5-1.5-3.5-4 2.5 0 3.5 1.5 3.5 4z"/><path d="M12 15c2 0 3.5-1.5 3.5-4C13 11 12 12.5 12 15z"/></svg>Granos</a>
+      <a href="tasas.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5v14h16"/><path d="M7 14l4-5 3 3 4-6"/></svg>Tasas &amp; FX</a>
+    </nav>
+    <div class="side-foot">No constituye asesoría. Se cita la fuente de cada dato.</div>
+  </aside>
+
+  <main class="main">
+    <div class="hero">
+      <h2>Monitores de mercado <span class="gold">·</span> data dura</h2>
+      <p>Arándanos, avellanas, granos y tasas — seguimiento cuantitativo, fuentes citadas y dato oficial distinguido de la estimación. Se actualizan solos, semana a semana.</p>
+    </div>
+    <div class="disc">
+      <strong>Aviso:</strong> material de análisis con fines informativos.
+      <strong>No constituye asesoría</strong> de inversión, comercialización ni recomendación de compra/venta.
+      Se cita la fuente de cada dato y se distingue lo oficial de la estimación.
+    </div>
+
+    <h2 class="sec">Mercados que seguimos</h2>
+    <div class="grid">
+      <a class="card" href="arandanos.html">
+        <div class="top"></div><h3>Arándanos</h3>
+        <div class="freq">Semanal</div>
+        <p>Campaña Perú: volumen, precio FOB por destino, El Niño Costero y serie histórica.</p>
+        <span class="go">Ver mercado</span>
+      </a>
+      <a class="card" href="avellanas.html">
+        <div class="top"></div><h3>Avellanas</h3>
+        <div class="freq">Mensual · pulso semanal</div>
+        <p>Turquía e Italia, brecha kernel TR/IT, exportación KİB, ventana Chile y Oregon.</p>
+        <span class="go">Ver mercado</span>
+      </a>
+      <a class="card" href="granos.html">
+        <div class="top"></div><h3>Granos</h3>
+        <div class="freq">Semanal</div>
+        <p>Maíz, trigo, canola/raps y avena. Biocombustibles y demanda derivada.</p>
+        <span class="go">Ver mercado</span>
+      </a>
+      <a class="card" href="tasas.html">
+        <div class="top"></div><h3>Tasas &amp; FX</h3>
+        <div class="freq">Días hábiles</div>
+        <p>BCCH: TPM, tasas locales, Treasuries y tipo de cambio. Panorama macro.</p>
+        <span class="go">Ver mercado</span>
+      </a>
+    </div>
+
+    <footer>
+      <div class="row">
+        <span>© <span id="yr"></span> <span class="gold">FALCO</span> Mercados — análisis independiente.</span>
+        <span>Fuentes: BCCH · Proarándanos · KİB · CBOT · ENFEN.</span>
+      </div>
+    </footer>
+  </main>
+</div>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
