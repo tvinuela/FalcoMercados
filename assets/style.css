@@ -173,3 +173,14 @@ body.dark .commentary li{color:#DBE3EB}
 body.dark .commentary .lede{background:#14212e}
 body.dark .commentary .lede strong{color:var(--gold)}
 body.dark footer .gold,body.dark .card .go{color:var(--goldl)}
+
+/* sensitivity table (fair value) */
+table.sens{width:100%;border-collapse:collapse;margin:6px 0 2px;font-size:14px}
+table.sens th,table.sens td{padding:8px 10px;text-align:center;border-bottom:1px solid var(--line)}
+table.sens th{background:var(--navy);color:#F2F2F2;font-weight:600}
+table.sens th:first-child,table.sens td:first-child{text-align:left;font-weight:600;color:var(--ink)}
+table.sens td.base{background:rgba(201,162,74,.14);font-weight:700;color:var(--goldd)}
+table.sens tbody tr:last-child td{border-bottom:none}
+body.dark table.sens th{background:#0a1420}
+body.dark table.sens th:first-child,body.dark table.sens td{color:#DBE3EB}
+body.dark table.sens td.base{color:var(--goldl)}
