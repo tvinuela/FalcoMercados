@@ -38,7 +38,7 @@
   <main class="main">
     <div class="mkt-head">
       <div>
-        <h2>Cobre — Oferta · Demanda · Balance · Precio</h2>
+        <h2>Cobre — Oferta · Demanda · Balance · Precio · Timba</h2>
         <div class="sub">Seguimiento mensual · COMEX/LME · ICSG · corte 10-sep-2026</div>
       </div>
       <a class="btn-dl" href="informes/informe_cobre_FALCO.pdf" download>Descargar informe (PDF)</a>
@@ -50,6 +50,7 @@
       <button class="subtab" data-tab="oferta">Oferta</button>
       <button class="subtab" data-tab="demanda">Demanda</button>
       <button class="subtab" data-tab="precios">Precios</button>
+      <button class="subtab" data-tab="timba">Timba</button>
       <button class="subtab" data-tab="noticias">Noticias</button>
     </div>
 
@@ -60,6 +61,12 @@
         <div class="stat"><div class="k">LME (spot)</div><div class="v">US$14.385/t</div><div class="d">≈ US$6,53/lb</div></div>
         <div class="stat"><div class="k">Inventarios COMEX</div><div class="v">635 kt</div><div class="d up">▲ récord (distorsión tarifaria)</div></div>
         <div class="stat"><div class="k">Balance 2026</div><div class="v">en disputa</div><div class="d">−600 a +126 kt según la casa</div></div>
+      </div>
+      <div class="panel">
+        <h3>Oferta, demanda y precio — últimos 15 años</h3>
+        <div class="cap">Barras = balance físico (producción refinada vs uso refinado, ICSG). Línea dorada = precio anual promedio (COMEX, eje derecho). Cuando la demanda supera la oferta hay déficit.</div>
+        <div class="chartbox"><canvas id="chartSD"></canvas></div>
+        <div class="src">Fuente: ICSG (World Refined Copper Production &amp; Usage, 2022–2025) + World Copper Factbook 2020 (2011–2019); precio COMEX HG=F front-month prom. anual (Yahoo). 2020–2021 refinado interpolado.</div>
       </div>
       <div class="commentary">
         <h3>Drivers de hoy</h3>
@@ -81,6 +88,12 @@
         <div class="cap">Serie ICSG 2011–2025. La refinada crece sostenido; la mina va más lenta (permisos, costos, leyes a la baja).</div>
         <div class="chartbox"><canvas id="chartProd"></canvas></div>
         <div class="src">Fuente: ICSG (World Refined Copper Production, 2022–2025) + World Copper Factbook 2020 (2011–2019) · mina USGS MCS. 2025 preliminar.</div>
+      </div>
+      <div class="panel">
+        <h3>Balance físico refinado — kt/año (déficit casi todos los años)</h3>
+        <div class="cap">Producción refinada menos uso refinado (ICSG). Positivo = superávit; negativo = déficit. El mercado vive estructuralmente ajustado: catorce de los últimos quince años cerraron en déficit o cerca de cero.</div>
+        <div class="chartbox"><canvas id="chartBalHist"></canvas></div>
+        <div class="src">Fuente: ICSG (balance refinado). 2020–2021 refinado interpolado (mina y signo de balance reales ICSG).</div>
       </div>
       <div class="commentary">
         <h3>Oferta y fundamentos</h3>
@@ -112,7 +125,6 @@
           <li><strong>China ≈ 58%</strong> del uso global; consumo aparente +2,4% YoY (ene-abr), proyectado +3,7% en 2026. El freno inmobiliario le pone techo.</li>
           <li><strong>Data centers / IA:</strong> ~475 kt en 2026 (~1,7% de un mercado de ~28 Mt). Absorben casi todo el <em>crecimiento</em> del año (~1,6%) pero son chicos en el total. Driver estructural (Macquarie: 330–420 kt/año a 2030), no lo que mueve el precio semanal.</li>
           <li><strong>EEUU en riesgo:</strong> pronósticos ven demanda cayendo ~6% en 2026 por efecto tarifas (Red Cloud).</li>
-          <li><strong>Posiciones:</strong> managed money neto <strong>largo ~72.882 contratos</strong> COMEX (~826 kt notional) al 2-sep. Long grande y apretado → vulnerable a liquidación; el −5,4% del 10-sep fue exactamente eso.</li>
         </ul>
       </div>
     </div>
@@ -127,6 +139,30 @@
       </div>
       <div class="commentary">
         <div class="lede"><span class="soon-note">Nota honesta: el spot COMEX cotiza en <strong>US$/lb</strong> (6,525) y el LME en <strong>US$/t</strong> (14.385); 1 t = 2.204,62 lb. El pico de 2026 refleja el arbitraje tarifario EEUU (prima COMEX sobre LME), no un salto de demanda física. Para el fair value CLP/USD lo que manda es el spot, que responde a tarifas + Fed + China.</span></div>
+      </div>
+    </div>
+
+    <!-- TIMBA -->
+    <div class="tabpane" data-tab="timba">
+      <div class="stats">
+        <div class="stat"><div class="k">Managed money — neto largo</div><div class="v">+72.882</div><div class="d">contratos · ~826 kt notional</div></div>
+        <div class="stat"><div class="k">Longs / shorts</div><div class="v">91.430 / 18.548</div><div class="d up">▲ apretado del lado largo</div></div>
+        <div class="stat"><div class="k">Interés abierto</div><div class="v">282.640</div><div class="d">contratos COMEX HG</div></div>
+        <div class="stat"><div class="k">Corte COT</div><div class="v">2-sep-2026</div><div class="d">CFTC (rezago de días)</div></div>
+      </div>
+      <div class="panel">
+        <h3>Posicionamiento especulativo — la timba (COT COMEX, managed money)</h3>
+        <div class="cap">Longs vs. shorts del dinero especulativo. El neto largo (72.882 contratos) es grande y apretado: cuando se cae un driver, esos largos salen corriendo y amplifican la caída del precio.</div>
+        <div class="chartbox"><canvas id="chartCOT"></canvas></div>
+        <div class="src">Fuente: CFTC Commitments of Traders (COMEX HG), semana al 2-sep-2026, vía IndexBox / MacroMicro / Investing. 1 contrato = 25.000 lb = 11,34 t.</div>
+      </div>
+      <div class="commentary">
+        <h3>Qué mueve el precio en el corto plazo</h3>
+        <ul>
+          <li><strong>El neto largo está grande y apretado:</strong> ~72.882 contratos (~826 kt notional). Un posicionamiento así es <strong>vulnerable a liquidación</strong>: basta que se caiga el relato alcista para que se desarme en cascada.</li>
+          <li><strong>El −5,4% intradía del 10-sep fue exactamente eso:</strong> al caerse el plan de aranceles se les fue el piso a los especuladores largos y salieron corriendo (<em>long liquidation</em>), no un cambio en el balance físico.</li>
+          <li><strong>Lectura:</strong> el posicionamiento explica el <em>timing</em> y la violencia de los movimientos de corto plazo; el balance físico (oferta/demanda) explica el nivel de mediano plazo. Hoy la timba manda.</li>
+        </ul>
       </div>
     </div>
 
@@ -162,15 +198,32 @@
 
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
-const GOLD='#C9A24A',NAVY='#0D1B2A',BLUE='#3E6B8F',RED='#C0564A',GREEN='#2E8B57',GREY='#5B6B7A',LGREY='#8FA0B0',LINE='#E2DCCB';
+const GOLD='#C9A24A',NAVY='#0D1B2A',BLUE='#3E6B8F',RED='#C0564A',GREEN='#2E8B57',GREY='#5B6B7A',LGREY='#8FA0B0',LINE='#E2DCCB',COPPER='#B87333';
 Chart.defaults.font.family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif";
 Chart.defaults.color=GREY;
 const YRS=['2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'];
 const MINA=[15960,16687,18185,18422,19153,20393,20058,20565,20528,20600,21200,21904,22346,22955,23201];
 const REFP=[19601,20194,21058,22490,22838,23357,23548,24058,24045,24500,24870,25278,26508,27414,28656];
+const USO=[19704,20468,21401,22908,23057,23487,23705,24484,24427,24550,24800,25857,26642,27420,28200];
 const PREC=[7807,7979,7284,6773,5459,4942,6271,6355,6039,6183,9381,8640,8520,9260,10531];
+const BAL=REFP.map((p,i)=>p-USO[i]);
 const charts={};
 function build(tab){
+  if(tab==='resumen'&&!charts.sd){
+    charts.sd=new Chart(document.getElementById('chartSD'),{
+      data:{labels:YRS,datasets:[
+        {type:'bar',label:'Refinado producido (oferta)',data:REFP,backgroundColor:COPPER,order:2,yAxisID:'y'},
+        {type:'bar',label:'Uso refinado (demanda)',data:USO,backgroundColor:BLUE,order:2,yAxisID:'y'},
+        {type:'line',label:'Precio (US$/t, COMEX)',data:PREC,borderColor:GOLD,backgroundColor:'transparent',tension:.25,pointRadius:2.5,borderWidth:2.6,order:1,yAxisID:'y1'}
+      ]},
+      options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+        plugins:{legend:{labels:{boxWidth:14,usePointStyle:true}},
+          tooltip:{callbacks:{label:c=>c.dataset.yAxisID==='y1'?' '+c.dataset.label+': US$'+c.parsed.y.toLocaleString('es-CL')+'/t':' '+c.dataset.label+': '+c.parsed.y.toLocaleString('es-CL')+' kt'}}},
+        scales:{
+          y:{position:'left',title:{display:true,text:'kt refinado'},grid:{color:LINE},min:15000},
+          y1:{position:'right',title:{display:true,text:'US$/t'},grid:{display:false}},
+          x:{grid:{display:false},ticks:{maxRotation:45,minRotation:45}}}}});
+  }
   if(tab==='oferta'&&!charts.prod){
     charts.prod=new Chart(document.getElementById('chartProd'),{
       type:'line',data:{labels:YRS,datasets:[
@@ -181,6 +234,13 @@ function build(tab){
         plugins:{legend:{labels:{boxWidth:14,usePointStyle:true}},
           tooltip:{callbacks:{label:c=>' '+c.dataset.label+': '+c.parsed.y.toLocaleString('es-CL')+' kt'}}},
         scales:{y:{title:{display:true,text:'kt'},grid:{color:LINE}},x:{grid:{display:false}}}}});
+    charts.balHist=new Chart(document.getElementById('chartBalHist'),{
+      type:'bar',data:{labels:YRS,datasets:[
+        {label:'Balance refinado (kt)',data:BAL,backgroundColor:BAL.map(v=>v>=0?GREEN:RED),borderRadius:3}
+      ]},
+      options:{maintainAspectRatio:false,plugins:{legend:{display:false},
+          tooltip:{callbacks:{label:c=>' '+(c.parsed.y>=0?'+':'')+c.parsed.y.toLocaleString('es-CL')+' kt ('+(c.parsed.y>=0?'superávit':'déficit')+')'}}},
+        scales:{y:{title:{display:true,text:'kt (déficit ◂ 0 ▸ superávit)'},grid:{color:LINE}},x:{grid:{display:false},ticks:{maxRotation:45,minRotation:45}}}}});
   }
   if(tab==='demanda'&&!charts.bal){
     charts.bal=new Chart(document.getElementById('chartBal'),{
@@ -204,6 +264,14 @@ function build(tab){
       options:{maintainAspectRatio:false,plugins:{legend:{display:false},
           tooltip:{callbacks:{label:c=>' US$'+c.parsed.y.toLocaleString('es-CL')+'/t'}}},
         scales:{y:{title:{display:true,text:'US$/tonelada'},grid:{color:LINE}},x:{grid:{display:false}}}}});
+  }
+  if(tab==='timba'&&!charts.cot){
+    charts.cot=new Chart(document.getElementById('chartCOT'),{
+      type:'bar',data:{labels:['Longs','Shorts','Neto largo'],
+        datasets:[{label:'Contratos',data:[91430,18548,72882],backgroundColor:[GREEN,RED,GOLD],borderRadius:4}]},
+      options:{maintainAspectRatio:false,plugins:{legend:{display:false},
+          tooltip:{callbacks:{label:c=>' '+c.parsed.y.toLocaleString('es-CL')+' contratos'}}},
+        scales:{y:{title:{display:true,text:'contratos COMEX HG'},grid:{color:LINE}},x:{grid:{display:false}}}}});
   }
   Object.values(charts).forEach(c=>c.resize());
 }
