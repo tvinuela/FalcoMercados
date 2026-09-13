@@ -38,7 +38,7 @@
   <main class="main">
     <div class="mkt-head">
       <div>
-        <h2>Cobre — Oferta · Demanda · Balance · Precio · Timba</h2>
+        <h2>Cobre — Oferta · Demanda · Balance · Precio</h2>
         <div class="sub">Seguimiento mensual · COMEX/LME · ICSG · corte 10-sep-2026</div>
       </div>
       <a class="btn-dl" href="informes/informe_cobre_FALCO.pdf" download>Descargar informe (PDF)</a>
@@ -50,7 +50,6 @@
       <button class="subtab" data-tab="oferta">Oferta</button>
       <button class="subtab" data-tab="demanda">Demanda</button>
       <button class="subtab" data-tab="precios">Precios</button>
-      <button class="subtab" data-tab="timba">Timba</button>
       <button class="subtab" data-tab="noticias">Noticias</button>
     </div>
 
@@ -127,6 +126,20 @@
           <li><strong>EEUU en riesgo:</strong> pronósticos ven demanda cayendo ~6% en 2026 por efecto tarifas (Red Cloud).</li>
         </ul>
       </div>
+      <div class="panel">
+        <h3>Posicionamiento especulativo (COT COMEX, managed money)</h3>
+        <div class="cap">Longs vs. shorts del dinero especulativo al 2-sep-2026: neto largo <strong>+72.882 contratos</strong> (~826 kt notional), interés abierto 282.640. El neto largo es grande y apretado: cuando se cae un driver, esos largos salen corriendo y amplifican la caída del precio.</div>
+        <div class="chartbox"><canvas id="chartCOT"></canvas></div>
+        <div class="src">Fuente: CFTC Commitments of Traders (COMEX HG), semana al 2-sep-2026, vía IndexBox / MacroMicro / Investing. 1 contrato = 25.000 lb = 11,34 t.</div>
+      </div>
+      <div class="commentary">
+        <h3>Posiciones — qué mueve el precio en el corto plazo</h3>
+        <ul>
+          <li><strong>El neto largo está grande y apretado:</strong> ~72.882 contratos (~826 kt notional). Un posicionamiento así es <strong>vulnerable a liquidación</strong>: basta que se caiga el relato alcista para que se desarme en cascada.</li>
+          <li><strong>El −5,4% intradía del 10-sep fue exactamente eso:</strong> al caerse el plan de aranceles se les fue el piso a los especuladores largos y salieron corriendo (<em>long liquidation</em>), no un cambio en el balance físico.</li>
+          <li><strong>Lectura:</strong> el posicionamiento explica el <em>timing</em> y la violencia de los movimientos de corto plazo; el balance físico (oferta/demanda) explica el nivel de mediano plazo. Hoy manda el posicionamiento.</li>
+        </ul>
+      </div>
     </div>
 
     <!-- PRECIOS -->
@@ -139,30 +152,6 @@
       </div>
       <div class="commentary">
         <div class="lede"><span class="soon-note">Nota honesta: el spot COMEX cotiza en <strong>US$/lb</strong> (6,525) y el LME en <strong>US$/t</strong> (14.385); 1 t = 2.204,62 lb. El pico de 2026 refleja el arbitraje tarifario EEUU (prima COMEX sobre LME), no un salto de demanda física. Para el fair value CLP/USD lo que manda es el spot, que responde a tarifas + Fed + China.</span></div>
-      </div>
-    </div>
-
-    <!-- TIMBA -->
-    <div class="tabpane" data-tab="timba">
-      <div class="stats">
-        <div class="stat"><div class="k">Managed money — neto largo</div><div class="v">+72.882</div><div class="d">contratos · ~826 kt notional</div></div>
-        <div class="stat"><div class="k">Longs / shorts</div><div class="v">91.430 / 18.548</div><div class="d up">▲ apretado del lado largo</div></div>
-        <div class="stat"><div class="k">Interés abierto</div><div class="v">282.640</div><div class="d">contratos COMEX HG</div></div>
-        <div class="stat"><div class="k">Corte COT</div><div class="v">2-sep-2026</div><div class="d">CFTC (rezago de días)</div></div>
-      </div>
-      <div class="panel">
-        <h3>Posicionamiento especulativo — la timba (COT COMEX, managed money)</h3>
-        <div class="cap">Longs vs. shorts del dinero especulativo. El neto largo (72.882 contratos) es grande y apretado: cuando se cae un driver, esos largos salen corriendo y amplifican la caída del precio.</div>
-        <div class="chartbox"><canvas id="chartCOT"></canvas></div>
-        <div class="src">Fuente: CFTC Commitments of Traders (COMEX HG), semana al 2-sep-2026, vía IndexBox / MacroMicro / Investing. 1 contrato = 25.000 lb = 11,34 t.</div>
-      </div>
-      <div class="commentary">
-        <h3>Qué mueve el precio en el corto plazo</h3>
-        <ul>
-          <li><strong>El neto largo está grande y apretado:</strong> ~72.882 contratos (~826 kt notional). Un posicionamiento así es <strong>vulnerable a liquidación</strong>: basta que se caiga el relato alcista para que se desarme en cascada.</li>
-          <li><strong>El −5,4% intradía del 10-sep fue exactamente eso:</strong> al caerse el plan de aranceles se les fue el piso a los especuladores largos y salieron corriendo (<em>long liquidation</em>), no un cambio en el balance físico.</li>
-          <li><strong>Lectura:</strong> el posicionamiento explica el <em>timing</em> y la violencia de los movimientos de corto plazo; el balance físico (oferta/demanda) explica el nivel de mediano plazo. Hoy la timba manda.</li>
-        </ul>
       </div>
     </div>
 
@@ -255,6 +244,12 @@ function build(tab){
       options:{maintainAspectRatio:false,plugins:{legend:{display:false},
           tooltip:{callbacks:{label:c=>' '+c.parsed.y+' kt'}}},
         scales:{y:{title:{display:true,text:'kt'},grid:{color:LINE}},x:{grid:{display:false}}}}});
+    charts.cot=new Chart(document.getElementById('chartCOT'),{
+      type:'bar',data:{labels:['Longs','Shorts','Neto largo'],
+        datasets:[{label:'Contratos',data:[91430,18548,72882],backgroundColor:[GREEN,RED,GOLD],borderRadius:4}]},
+      options:{maintainAspectRatio:false,plugins:{legend:{display:false},
+          tooltip:{callbacks:{label:c=>' '+c.parsed.y.toLocaleString('es-CL')+' contratos'}}},
+        scales:{y:{title:{display:true,text:'contratos COMEX HG'},grid:{color:LINE}},x:{grid:{display:false}}}}});
   }
   if(tab==='precios'&&!charts.precio){
     charts.precio=new Chart(document.getElementById('chartPrecio'),{
@@ -264,14 +259,6 @@ function build(tab){
       options:{maintainAspectRatio:false,plugins:{legend:{display:false},
           tooltip:{callbacks:{label:c=>' US$'+c.parsed.y.toLocaleString('es-CL')+'/t'}}},
         scales:{y:{title:{display:true,text:'US$/tonelada'},grid:{color:LINE}},x:{grid:{display:false}}}}});
-  }
-  if(tab==='timba'&&!charts.cot){
-    charts.cot=new Chart(document.getElementById('chartCOT'),{
-      type:'bar',data:{labels:['Longs','Shorts','Neto largo'],
-        datasets:[{label:'Contratos',data:[91430,18548,72882],backgroundColor:[GREEN,RED,GOLD],borderRadius:4}]},
-      options:{maintainAspectRatio:false,plugins:{legend:{display:false},
-          tooltip:{callbacks:{label:c=>' '+c.parsed.y.toLocaleString('es-CL')+' contratos'}}},
-        scales:{y:{title:{display:true,text:'contratos COMEX HG'},grid:{color:LINE}},x:{grid:{display:false}}}}});
   }
   Object.values(charts).forEach(c=>c.resize());
 }
